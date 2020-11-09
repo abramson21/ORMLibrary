@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORMLibrary", "ORMLibrary\ORMLibrary.csproj", "{084D7BB7-D599-454A-91D1-FE6282156074}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{084D7BB7-D599-454A-91D1-FE6282156074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{084D7BB7-D599-454A-91D1-FE6282156074}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{084D7BB7-D599-454A-91D1-FE6282156074}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{084D7BB7-D599-454A-91D1-FE6282156074}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {96E00434-8682-4C27-A2CF-A1CC9D565D3A}
+	EndGlobalSection
+EndGlobal
