@@ -1,0 +1,5 @@
+C:\Users\Abram\source\repos\TestORMLibrary\Library.NH\bin\Debug\netcoreapp3.1\Library.NH.exe
+C:\Users\Abram\source\repos\TestORMLibrary\Library.NH\obj\Debug\netcoreapp3.1\Library.NH.csprojAssemblyReference.cache
+C:\Users\Abram\source\repos\TestORMLibrary\Library.NH\obj\Debug\netcoreapp3.1\Library.NH.AssemblyInfoInputs.cache
+C:\Users\Abram\source\repos\TestORMLibrary\Library.NH\obj\Debug\netcoreapp3.1\Library.NH.AssemblyInfo.cs
+C:\Users\Abram\source\repos\TestORMLibrary\Library.NH\bin\Debug\netcoreapp3.1\Library.Domain.dll
