@@ -10,7 +10,7 @@ namespace Library.NH
     /// <summary>
     /// Класс-помощник, обеспечивающий настройку для конкретной сборки.
     /// </summary>
-    class LibraryNHibernateConfigurator
+    public class LibraryNHibernateConfigurator
     {
         [Obsolete("Стоит переписать на расширение с учётом регистрации правил отображения и конвенций.")]
         public static Assembly GetAssembly() => Assembly.GetExecutingAssembly();
