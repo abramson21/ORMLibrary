@@ -12,6 +12,7 @@
 
     using Library.NH;
 
+
     internal static class ProgramConfigurationExtensions
     {
         internal static IServiceCollection AddConfigurationFromFile(this IServiceCollection serviceCollection, string filename)
@@ -31,19 +32,5 @@
             return serviceCollection.AddSingleton(serviceProvider => GetSessionFactory(serviceProvider, connectionStringKey));
         }
 
-        private static ISessionFactory GetSessionFactory(IServiceProvider serviceProvider, string connectionStringKey)
-        {
-            var basePath = Directory.GetParent(AppContext.BaseDirectory).FullName;
-
-            var configuration = serviceProvider.GetService<IConfigurationRoot>();
-
-            var dataSourceLacation = Path.GetFullPath(configuration.GetConnectionString(connectionStringKey), basePath);
-
-            NHibernateConfigurator.DataSourceLocation = dataSourceLacation;
-
-            NHibernateConfigurator.GetConfiguration(LibraryNHibernateConfigurator.GetAssembly());
-
-            return NHibernateConfigurator.GetSessionFactory();
-        }
     }
 }

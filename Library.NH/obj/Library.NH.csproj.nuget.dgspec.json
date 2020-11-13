@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\Library.NH\\Library.NH.csproj": {}
+    "C:\\Users\\Abram\\source\\repos\\TestORMLibrary\\Library.NH\\Library.NH.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\Library.Domain\\Library.Domain.csproj": {
+    "C:\\Users\\Abram\\source\\repos\\TestORMLibrary\\Library.Domain\\Library.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\Library.Domain\\Library.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Abram\\source\\repos\\TestORMLibrary\\Library.Domain\\Library.Domain.csproj",
         "projectName": "Library.Domain",
-        "projectPath": "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\Library.Domain\\Library.Domain.csproj",
+        "projectPath": "C:\\Users\\Abram\\source\\repos\\TestORMLibrary\\Library.Domain\\Library.Domain.csproj",
         "packagesPath": "C:\\Users\\Abram\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\Library.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Abram\\source\\repos\\TestORMLibrary\\Library.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Abram\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -66,14 +66,14 @@
         }
       }
     },
-    "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\Library.NH\\Library.NH.csproj": {
+    "C:\\Users\\Abram\\source\\repos\\TestORMLibrary\\Library.NH\\Library.NH.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\Library.NH\\Library.NH.csproj",
+        "projectUniqueName": "C:\\Users\\Abram\\source\\repos\\TestORMLibrary\\Library.NH\\Library.NH.csproj",
         "projectName": "Library.NH",
-        "projectPath": "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\Library.NH\\Library.NH.csproj",
+        "projectPath": "C:\\Users\\Abram\\source\\repos\\TestORMLibrary\\Library.NH\\Library.NH.csproj",
         "packagesPath": "C:\\Users\\Abram\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\Library.NH\\obj\\",
+        "outputPath": "C:\\Users\\Abram\\source\\repos\\TestORMLibrary\\Library.NH\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Abram\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -91,8 +91,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\Library.Domain\\Library.Domain.csproj": {
-                "projectPath": "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\Library.Domain\\Library.Domain.csproj"
+              "C:\\Users\\Abram\\source\\repos\\TestORMLibrary\\Library.Domain\\Library.Domain.csproj": {
+                "projectPath": "C:\\Users\\Abram\\source\\repos\\TestORMLibrary\\Library.Domain\\Library.Domain.csproj"
               }
             }
           }
