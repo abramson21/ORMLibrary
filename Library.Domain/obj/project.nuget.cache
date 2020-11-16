@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vW09yjacRfHH2ooKDBvoEe13BMvqbAGf/zarR96QU6TKXoGaaT9/aS6sIrKPXXNq+hARdu/jBnyyGoFoxKHMDA==",
+  "dgSpecHash": "4NQeJeT89B6oot7xYknJeZjnw3BsJ9rkocRFvncIjw/nfsSQptxMXjod9soxpkPrsJUfOrBH213Bf0AlAT+rxQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\Library.Domain\\Library.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Abram\\Desktop\\res\\ORMLibrary\\Library.Domain\\Library.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Abram\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512"
   ],
