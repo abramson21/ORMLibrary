@@ -28,7 +28,7 @@
             }
         }
 
-        public Name(string firstName, string secondName, string MiddelName)
+        public Name(string firstName, string secondName, string middelName)
         {
             this.CheckInputString(firstName);
             this.FirstName = firstName;
@@ -36,8 +36,8 @@
             this.CheckInputString(secondName);
             this.SecondName = secondName;
 
-            this.CheckInputString(secondName);
-            this.SecondName = secondName;
+            this.CheckInputString(middelName);
+            this.MiddleName = middelName;
         }
 
         public override int GetHashCode()

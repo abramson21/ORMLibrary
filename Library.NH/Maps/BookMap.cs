@@ -7,10 +7,11 @@
     {
         public BookMap()
         {
-            this.Table("Book");
+            this.Table("Books");
 
             this.Id(x => x.Id);
-            this.Map(x => x.Name, "Name");
+            //this.Name(x => x.Name);
+            //this.Map(x => x.Name, 'Name');
         }
     }
 }

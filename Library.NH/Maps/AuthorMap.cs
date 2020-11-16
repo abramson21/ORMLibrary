@@ -8,7 +8,7 @@
 
         public AuthorMap()
         {
-            this.Table("Author");
+            this.Table("Authors");
 
             this.Id(x => x.Id);
 
