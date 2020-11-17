@@ -1033,6 +1033,9 @@
         }
       },
       "Library.Domain/1.0.0": {
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
         "runtime": {
           "Library.Domain.dll": {}
         }

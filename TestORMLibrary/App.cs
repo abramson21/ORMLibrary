@@ -27,7 +27,7 @@
                 {
                     Console.WriteLine(book);
                 }
-                
+
                 var authors = session.Query<Author>().ToList();
                 foreach (var author in authors)
                 {

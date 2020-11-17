@@ -1629,6 +1629,9 @@
       "Library.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Library.Domain.dll": {}
         },
@@ -5869,34 +5872,36 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Abram\\Desktop\\res\\ORMLibrary\\TestORMLibrary\\TestORMLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\TestORMLibrary\\TestORMLibrary.csproj",
       "projectName": "TestORMLibrary",
-      "projectPath": "C:\\Users\\Abram\\Desktop\\res\\ORMLibrary\\TestORMLibrary\\TestORMLibrary.csproj",
+      "projectPath": "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\TestORMLibrary\\TestORMLibrary.csproj",
       "packagesPath": "C:\\Users\\Abram\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Abram\\Desktop\\res\\ORMLibrary\\TestORMLibrary\\obj\\",
+      "outputPath": "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\TestORMLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Abram\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\ComponentOne.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\ComponentOne\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Abram\\Desktop\\res\\ORMLibrary\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Abram\\Desktop\\res\\ORMLibrary\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\Infrastructure\\Infrastructure.csproj"
             },
-            "C:\\Users\\Abram\\Desktop\\res\\ORMLibrary\\Library.Domain\\Library.Domain.csproj": {
-              "projectPath": "C:\\Users\\Abram\\Desktop\\res\\ORMLibrary\\Library.Domain\\Library.Domain.csproj"
+            "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\Library.Domain\\Library.Domain.csproj": {
+              "projectPath": "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\Library.Domain\\Library.Domain.csproj"
             },
-            "C:\\Users\\Abram\\Desktop\\res\\ORMLibrary\\Library.NH\\Library.NH.csproj": {
-              "projectPath": "C:\\Users\\Abram\\Desktop\\res\\ORMLibrary\\Library.NH\\Library.NH.csproj"
+            "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\Library.NH\\Library.NH.csproj": {
+              "projectPath": "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\Library.NH\\Library.NH.csproj"
             }
           }
         }

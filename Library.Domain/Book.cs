@@ -10,6 +10,9 @@
 
         public virtual string Name { get; protected set; }
 
+        public virtual ISet<Author> Authors { get; protected set; } = new HashSet<Author>();
+
         public virtual string ToString() => $"{this.Id} --> {this.Name}";
+
     }
 }
