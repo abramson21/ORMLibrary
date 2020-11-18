@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tQFYvG7QF/1X4FRcS36YBzR+JEb0TQX1XOIZwHsKT/E+uNNI4QFEhAQhgmyGsLlF1WfdmrUl4Tp0zJGuC6xJ3g==",
+  "dgSpecHash": "WafDIPrPHmwLX9tHP2NsHK5E6tlLUDCNMNJki3GjRG/DwV4ryTxWD085zEroZzEzhD0Usj0hhSsrrFFvDKiwmw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Abram\\source\\repos\\ORMLibrary\\Library.NH\\Library.NH.csproj",
+  "projectFilePath": "C:\\Users\\Abram\\Desktop\\First_Iter\\ORMLibrary\\Library.NH\\Library.NH.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Abram\\.nuget\\packages\\antlr3.runtime\\3.5.1\\antlr3.runtime.3.5.1.nupkg.sha512",
     "C:\\Users\\Abram\\.nuget\\packages\\fluentnhibernate\\3.1.0\\fluentnhibernate.3.1.0.nupkg.sha512",

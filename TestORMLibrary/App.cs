@@ -28,6 +28,8 @@
                     Console.WriteLine(book);
                 }
 
+                Console.WriteLine("_________________________________________");
+
                 var authors = session.Query<Author>().ToList();
                 foreach (var author in authors)
                 {

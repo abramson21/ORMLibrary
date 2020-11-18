@@ -10,9 +10,13 @@
 
         public virtual string Name { get; protected set; }
 
+        public virtual string Detailes { get; protected set; }
+
+        public virtual int TypeBook { get; protected set; }
+
         public virtual ISet<Author> Authors { get; protected set; } = new HashSet<Author>();
 
-        public virtual string ToString() => $"{this.Id} --> {this.Name}";
+        public override string ToString() => $"{this.Name} [{this.Detailes}]";
 
     }
 }
