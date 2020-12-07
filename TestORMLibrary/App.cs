@@ -35,6 +35,22 @@
                 {
                     Console.WriteLine(author);
                 }
+
+                Console.WriteLine("_________________________________________");
+
+                var shelves = session.Query<Room>().ToList();
+                foreach (var shelf in shelves)
+                {
+                    Console.WriteLine(shelf);
+                }
+
+                Console.WriteLine("_________________________________________");
+
+                //var genres = session.Query<Genre>().ToList();
+                //foreach (var genre in genres)
+                //{
+                //    Console.WriteLine(genre);
+                //}
             }
             await Task.CompletedTask;
         }

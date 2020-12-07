@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Text;
+    using Infrastructure.Extensions;
 
     public class Book
     {
@@ -16,7 +17,9 @@
 
         public virtual ISet<Author> Authors { get; protected set; } = new HashSet<Author>();
 
-        public override string ToString() => $"{this.Name} [{this.Detailes}]";
+        public virtual ISet<Genre> Genres { get; protected set; } = new HashSet<Genre>();
+
+        public override string ToString() => $"{this.Name} - {this.Genres} [{this.Detailes}]";
 
     }
 }

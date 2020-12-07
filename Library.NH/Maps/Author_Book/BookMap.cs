@@ -14,6 +14,7 @@
             this.Map(x => x.Name);
             this.Map(x => x.Detailes);
             this.HasManyToMany(x => x.Authors);
+            this.HasMany(x => x.Genres).Inverse();
         }
     }
 }
