@@ -17,8 +17,6 @@ namespace Library.NH.Maps
 
             this.References(x => x.Room).ForeignKey("ID_Room");
 
-            //this.Map(x => x.Note);
-
             this.Map(x => x.NumberShelf);
         }
     }

@@ -13,8 +13,9 @@
             this.Id(x => x.Id);
             this.Map(x => x.Name);
             this.Map(x => x.Detailes);
-            this.HasManyToMany(x => x.Authors);
-            this.HasMany(x => x.Genres).Inverse();
+            this.HasMany(x => x.Genres);
+            this.HasManyToMany(x => x.Authors)/*.Table("Authors")*/;
+            this.HasMany(x => x.Rooms);
         }
     }
 }

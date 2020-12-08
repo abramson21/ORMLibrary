@@ -15,6 +15,8 @@ namespace Library.Domain
 
         public virtual ISet<Shelf> Shelves { get; protected set; } = new HashSet<Shelf>();
 
+        public virtual Book Book { get; protected set; }
+
         public override string ToString() => $"Номер комнаты: {this.RoomName} -- Номер полки: {this.Shelves.Join()}";
     }
 }

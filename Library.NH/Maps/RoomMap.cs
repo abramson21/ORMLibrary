@@ -17,6 +17,8 @@ namespace Library.NH.Maps
             this.Map(x => x.RoomName);
 
             this.HasMany(x => x.Shelves).Inverse();
+
+            this.References(x => x.Book);
         }
     }
 }

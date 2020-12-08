@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations.Schema;
     using System.Text;
     using Infrastructure.Extensions;
 
@@ -13,13 +14,14 @@
 
         public virtual string Detailes { get; protected set; }
 
-        public virtual int TypeBook { get; protected set; }
+        //public virtual int TypeBook { get; protected set; }
 
         public virtual ISet<Author> Authors { get; protected set; } = new HashSet<Author>();
 
         public virtual ISet<Genre> Genres { get; protected set; } = new HashSet<Genre>();
 
-        public override string ToString() => $"{this.Name} - {this.Genres} [{this.Detailes}]";
+        public virtual ISet<Room> Rooms { get; protected set; } = new HashSet<Room>();
 
+        public override string ToString() => $"{this.Name} - {this.Genres.Join()} [{this.Detailes}] --- {this.Rooms.Join()}";
     }
 }
