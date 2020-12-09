@@ -1,11 +1,6 @@
-﻿using Library.Domain;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Library.NH.Maps
+﻿namespace Library.NH.Maps
 {
-    using FluentNHibernate;
+    using Library.Domain;
     using FluentNHibernate.Mapping;
 
     public class PublicationMap : ClassMap<Publication>
@@ -18,7 +13,7 @@ namespace Library.NH.Maps
 
             this.Map(x => x.Name);
 
-            this.References(x => x.Book);
+            this.HasMany(x => x.Books);
         }
     }
 }

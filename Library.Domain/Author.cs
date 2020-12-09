@@ -1,7 +1,6 @@
 ﻿namespace Library.Domain
 {
     using System.Collections.Generic;
-    using Infrastructure.Extensions;
 
     public class Author
     {

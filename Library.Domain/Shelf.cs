@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Library.Domain
+﻿namespace Library.Domain
 {
     public class Shelf
     {
@@ -16,6 +12,6 @@ namespace Library.Domain
 
         public virtual Room Room { get; protected set; }
 
-        public override string ToString() => $"{this.NumberShelf}";
+        public override string ToString() => $"{this.NumberShelf} ({this.Note})";
     }
 }

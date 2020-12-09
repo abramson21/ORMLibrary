@@ -1,11 +1,7 @@
-﻿using Library.Domain;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Library.Domain
+﻿namespace Library.Domain
 {
-    using Infrastructure.Extensions;
+    using System.Collections.Generic;
+
     public class Genre
     {
         public virtual int Id { get; protected set; }
@@ -14,7 +10,6 @@ namespace Library.Domain
 
         public virtual string Title { get; protected set; }
 
-        //public virtual Book Book { get; protected set; }
         public virtual ISet<Book> Books { get; protected set; } = new HashSet<Book>();
 
         public override string ToString() => $"{this.Title}";

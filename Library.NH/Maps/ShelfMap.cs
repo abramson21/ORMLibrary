@@ -1,12 +1,8 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Library.NH.Maps
+﻿namespace Library.NH.Maps
 {
     using FluentNHibernate.Mapping;
     using Library.Domain;
+
     public class ShelfMap : ClassMap<Shelf>
     {
         public ShelfMap()
@@ -15,9 +11,11 @@ namespace Library.NH.Maps
 
             this.Id(x => x.Id);
 
-            this.References(x => x.Room).ForeignKey("ID_Room");
-
             this.Map(x => x.NumberShelf);
+
+            this.Map(x => x.Note);
+
+            this.References(x => x.Room).ForeignKey("ID_Room");
         }
     }
 }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Library.NH.Maps
+﻿namespace Library.NH.Maps
 {
     using FluentNHibernate.Mapping;
     using Library.Domain;
@@ -19,7 +15,7 @@ namespace Library.NH.Maps
 
             this.HasMany(x => x.Shelves);
 
-            this.References(x => x.Book);
+            this.HasMany(x => x.Books);
         }
     }
 }

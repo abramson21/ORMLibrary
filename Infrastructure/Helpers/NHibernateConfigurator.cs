@@ -9,7 +9,7 @@
     {
         public static string DataSourceLocation = @"DESKTOP-9RIQ0RR\SQLEXPRESS";
 
-        private static string GetConnectionString() => @"Data Source=DESKTOP-9RIQ0RR\SQLEXPRESS;Initial Catalog=DBLibraryTEST;Integrated Security=True";/*$"Data Source={DataSourceLocation};Initial Catalog = DBLibrary; Integrated Security = True";*/
+        private static string GetConnectionString() => @"Data Source=DESKTOP-Q3NADVC\MSSQLSERVER01;Initial Catalog=DBLibraryTEST;Integrated Security=True";/*$"Data Source={DataSourceLocation};Initial Catalog = DBLibrary; Integrated Security = True";*/
 
         private static FluentConfiguration config;
 
