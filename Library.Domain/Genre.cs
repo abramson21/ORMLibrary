@@ -14,8 +14,9 @@ namespace Library.Domain
 
         public virtual string Title { get; protected set; }
 
-        public virtual Book Book { get; protected set; }
+        //public virtual Book Book { get; protected set; }
+        public virtual ISet<Book> Books { get; protected set; } = new HashSet<Book>();
 
-        public override string ToString() => $" -- > {this.Title}";
+        public override string ToString() => $"{this.Title}";
     }
 }

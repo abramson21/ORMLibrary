@@ -18,7 +18,7 @@ namespace Library.NH.Maps
 
             this.Map(x => x.Name);
 
-            this.References(x => x.Book).ForeignKey("ID_Publication");
+            this.References(x => x.Book);
         }
     }
 }

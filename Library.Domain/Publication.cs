@@ -14,6 +14,6 @@ namespace Library.Domain
 
         public virtual Book Book { get; protected set; }
 
-        public override string ToString() => $" Публикация: {this.Name} ";
+        public override string ToString() => $"{this.Name} ";
     }
 }

@@ -13,8 +13,8 @@ namespace Library.NH.Maps
             this.Table("Genre");
             this.Id(x => x.Id);
             this.Map(x => x.Title);
-            //this.HasMany(x => x.Books);
-            this.References(x => x.Book).ForeignKey("ID_Book");
+            this.HasMany(x => x.Books);
+            //this.References(x => x.Book).ForeignKey("ID_Book");
         }
     }
 }

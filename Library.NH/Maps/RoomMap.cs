@@ -6,6 +6,7 @@ namespace Library.NH.Maps
 {
     using FluentNHibernate.Mapping;
     using Library.Domain;
+
     public class RoomMap : ClassMap<Room>
     {
         public RoomMap()
@@ -16,7 +17,7 @@ namespace Library.NH.Maps
 
             this.Map(x => x.RoomName);
 
-            this.HasMany(x => x.Shelves).Inverse();
+            this.HasMany(x => x.Shelves);
 
             this.References(x => x.Book);
         }

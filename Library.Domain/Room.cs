@@ -17,6 +17,6 @@ namespace Library.Domain
 
         public virtual Book Book { get; protected set; }
 
-        public override string ToString() => $"Номер комнаты: {this.RoomName} -- Номер полки: {this.Shelves.Join()}";
+        public override string ToString() => $"{this.RoomName} --> Номер полки: {this.Shelves.Join()}";
     }
 }

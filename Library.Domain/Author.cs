@@ -11,6 +11,6 @@
 
         public virtual ISet<Book> Books { get; protected set; } = new HashSet<Book>();
 
-        public override string ToString() => $"{this.Id} --> {this.Name} ";
+        public override string ToString() => $"{this.Name} ";
     }
 }
