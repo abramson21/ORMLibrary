@@ -44,13 +44,13 @@
                     Console.WriteLine(shelf);
                 }
 
-                //Console.WriteLine("_________________________________________");
+                Console.WriteLine("_________________________________________");
 
-                //var genres = session.Query<Genre>().ToList();
-                //foreach (var genre in genres)
-                //{
-                //    Console.WriteLine(genre);
-                //}
+                var genres = session.Query<Publication>().ToList();
+                foreach (var genre in genres)
+                {
+                    Console.WriteLine(genre);
+                }
             }
             await Task.CompletedTask;
         }

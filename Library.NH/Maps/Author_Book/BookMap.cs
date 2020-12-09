@@ -16,6 +16,7 @@
             this.HasMany(x => x.Genres);
             this.HasManyToMany(x => x.Authors)/*.Table("Authors")*/;
             this.HasMany(x => x.Rooms);
+            this.HasMany(x => x.Publications);
         }
     }
 }
