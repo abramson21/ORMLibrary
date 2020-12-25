@@ -11,17 +11,15 @@
 
             this.Id(x => x.Id);
 
-            this.Map(x => x.Name);
+            this.Map(x => x.Title);
 
-            this.Map(x => x.Detailes);
+            this.HasManyToMany(x => x.Genres).Table("GenreBook");
 
-            this.References(x => x.Genre);
+            this.HasManyToMany(x => x.Authors).Table("AuthorBook");
 
-            this.HasManyToMany(x => x.Authors);
+            this.References(x => x.Shelf, "ID_Shelf");
 
-            this.References(x => x.Room);
-
-            this.References(x => x.Publication);
+            this.HasManyToMany(x => x.Publishers).Table("PublisherBook");
         }
     }
 }

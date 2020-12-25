@@ -7,18 +7,16 @@
     {
         public virtual int Id { get; protected set; }
 
-        public virtual string Name { get; protected set; }
-
-        public virtual string Detailes { get; protected set; }
+        public virtual string Title { get; protected set; }
 
         public virtual ISet<Author> Authors { get; protected set; } = new HashSet<Author>();
 
-        public virtual Genre Genre { get; protected set; }
+        public virtual ISet<Genre> Genres { get; protected set; } = new HashSet<Genre>();
 
-        public virtual Publication Publication { get; protected set; }
+        public virtual ISet<Publisher> Publishers { get; protected set; } = new HashSet<Publisher>();
 
-        public virtual Room Room { get; protected set; }
+        public virtual Shelf Shelf { get; protected set; }
 
-        public override string ToString() => $"Название книги: \"{this.Name}\" \n\t Автор: {this.Authors.Join()} \n\t Жанр: {this.Genre} \n\t Детали: {this.Detailes} \n\t Расположение: {this.Room} \n\t Издание: {this.Publication} \n\n";
+        public override string ToString() => $"Название книги: \"{this.Title}\"\n\tАвтор: {this.Authors.Join()}\n\tЖанр: {this.Genres.Join()}\n\tПубликация в \"{this.Publishers.Join()}\"\n\tКомната: {this.Shelf}\n";
     }
 }

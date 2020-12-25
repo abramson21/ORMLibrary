@@ -7,15 +7,15 @@
     {
         public ShelfMap()
         {
-            this.Table("Shelf");
+            this.Table("Shelves");
 
             this.Id(x => x.Id);
 
-            this.Map(x => x.NumberShelf);
+            this.Map(x => x.Description);
 
-            this.Map(x => x.Note);
+            this.HasMany(x => x.Books);
 
-            this.References(x => x.Room).ForeignKey("ID_Room");
+            this.References(x => x.Room, "ID_Room");
         }
     }
 }

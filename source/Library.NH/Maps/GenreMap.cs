@@ -7,14 +7,13 @@
     {
         public GenreMap()
         {
-            this.Table("Genre");
+            this.Table("Genres");
 
             this.Id(x => x.Id);
 
-            this.Map(x => x.Title);
+            this.Map(x => x.Name);
 
-            this.HasMany(x => x.Books);
-
+            this.HasManyToMany(x => x.Books).Table("GenreBook");
         }
     }
 }

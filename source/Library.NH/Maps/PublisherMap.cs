@@ -3,17 +3,17 @@
     using Library.Domain;
     using FluentNHibernate.Mapping;
 
-    public class PublicationMap : ClassMap<Publication>
+    public class PublicationMap : ClassMap<Publisher>
     {
-       public PublicationMap()
+        public PublicationMap()
         {
-            this.Table("Publication");
+            this.Table("Publishers");
 
             this.Id(x => x.Id);
 
             this.Map(x => x.Name);
 
-            this.HasMany(x => x.Books);
+            this.HasManyToMany(x => x.Books).Table("PublisherBook");
         }
     }
 }

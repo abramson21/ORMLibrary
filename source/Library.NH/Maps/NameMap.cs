@@ -10,7 +10,7 @@
     {
         public NameMap()
         {
-            this.Map(x => x.SecondName);
+            this.Map(x => x.LastName);
             this.Map(x => x.FirstName);
             this.Map(x => x.MiddleName);
         }

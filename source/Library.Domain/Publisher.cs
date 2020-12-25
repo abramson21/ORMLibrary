@@ -1,11 +1,10 @@
 ﻿namespace Library.Domain
 {
     using System.Collections.Generic;
-    public class Publication
+
+    public class Publisher
     {
         public virtual int Id { get; protected set; }
-
-        public virtual string ID_Publication { get; protected set; }
 
         public virtual string Name { get; protected set; }
 

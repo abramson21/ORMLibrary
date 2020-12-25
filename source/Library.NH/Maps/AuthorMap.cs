@@ -19,7 +19,7 @@
 
             this.Component(x => x.Name);
 
-            this.HasManyToMany(x => x.Books);
+            this.HasManyToMany(x => x.Books).Table("AuthorBook");
         }
     }
 }
