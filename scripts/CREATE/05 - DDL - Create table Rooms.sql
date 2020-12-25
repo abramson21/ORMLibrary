@@ -1,6 +1,4 @@
-use DBLibraryHome
-
-CREATE TABLE [dbo].[Publishers]
+CREATE TABLE [dbo].[Rooms]
 (
       [ID] int           primary key
     , Name nvarchar(255) not null
