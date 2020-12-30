@@ -4,6 +4,13 @@
 
     public class Author
     {
+        public Author() { }
+
+        public Author(Name name)
+        {
+            this.Name = name;
+        }
+
         public virtual int Id { get; protected set; }
 
         public virtual Name Name { get; protected set; }

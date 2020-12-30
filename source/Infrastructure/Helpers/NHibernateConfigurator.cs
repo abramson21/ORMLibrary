@@ -7,9 +7,9 @@
 
     public static class NHibernateConfigurator
     {
-        public static string DataSourceLocation = @"DESKTOP-9RIQ0RR\SQLEXPRESS";
+        public static string DataSourceLocation = @"DESKTOP-RLC90KL\SQLEXPRESS";
 
-        private static string GetConnectionString() => @"Data Source=DESKTOP-Q3NADVC\MSSQLSERVER01;Initial Catalog=DBLibraryTEST;Integrated Security=True";/*$"Data Source={DataSourceLocation};Initial Catalog = DBLibrary; Integrated Security = True";*/
+        private static string GetConnectionString() => @"Data Source=DESKTOP-RLC90KL\SQLEXPRESS;Initial Catalog=DBLibraryHome;Integrated Security=True";/*$"Data Source={DataSourceLocation};Initial Catalog = DBLibrary; Integrated Security = True";*/
 
         private static FluentConfiguration config;
 

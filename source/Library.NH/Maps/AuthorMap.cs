@@ -6,7 +6,7 @@
     /// <summary>
     /// Правила отображения сущности <see cref="Author"/> на таблицу БД.
     /// </summary>
-    internal class AuthorMap : ClassMap<Author>
+    public class AuthorMap : ClassMap<Author>
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="AuthorMap"/>.
@@ -19,7 +19,7 @@
 
             this.Component(x => x.Name);
 
-            this.HasManyToMany(x => x.Books);
+            this.HasManyToMany(x => x.Books).Table("AuthorBook");
         }
     }
 }

@@ -2,11 +2,11 @@
 {
     using System.Collections.Generic;
 
-    public class Genre
+    public class Publisher
     {
-        public Genre() { }
+        public Publisher() { }
 
-        public Genre(string name)
+        public Publisher(string name)
         {
             this.Name = name;
         }
@@ -17,6 +17,6 @@
 
         public virtual ISet<Book> Books { get; protected set; } = new HashSet<Book>();
 
-        public override string ToString() => $"{this.Name}";
+        public override string ToString() => $"{this.Name} ";
     }
 }

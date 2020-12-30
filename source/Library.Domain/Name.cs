@@ -6,10 +6,9 @@
     {
         public string FirstName { get; }
 
-        public string SecondName { get; }
+        public string LastName { get; }
 
         public string MiddleName { get; }
-
 
         [Obsolete("For NHibernate only.", true)]
         protected Name()
@@ -30,7 +29,7 @@
             this.FirstName = firstName;
 
             this.CheckInputString(secondName);
-            this.SecondName = secondName;
+            this.LastName = secondName;
 
             this.CheckInputString(middelName);
             this.MiddleName = middelName;
@@ -38,7 +37,7 @@
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(this.FirstName, this.SecondName, this.MiddleName ?? string.Empty);
+            return HashCode.Combine(this.FirstName, this.LastName, this.MiddleName ?? string.Empty);
         }
 
         public override bool Equals(object obj)
@@ -55,11 +54,11 @@
 
             return obj is Name other
                 && string.Equals(this.FirstName, other.FirstName, StringComparison.InvariantCulture)
-                && string.Equals(this.SecondName, other.SecondName, StringComparison.InvariantCulture)
+                && string.Equals(this.LastName, other.LastName, StringComparison.InvariantCulture)
                 && string.Equals(this.MiddleName, other.MiddleName, StringComparison.InvariantCulture);
         }
 
         /// <inheritdoc/>
-        public override string ToString() => $"{this.SecondName} {this.FirstName} {this.MiddleName}".Trim();
+        public override string ToString() => $"{this.LastName} {this.FirstName} {this.MiddleName}".Trim();
     }
 }
