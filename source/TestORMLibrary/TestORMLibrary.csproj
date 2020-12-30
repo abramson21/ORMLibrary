@@ -25,6 +25,7 @@
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
     <ProjectReference Include="..\Library.Domain\Library.Domain.csproj" />
     <ProjectReference Include="..\Library.NH\Library.NH.csproj" />
+    <ProjectReference Include="..\Library.Services\Library.Services.csproj" />
   </ItemGroup>
 
 </Project>

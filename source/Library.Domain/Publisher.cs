@@ -15,6 +15,7 @@
 
         public virtual string Name { get; protected set; }
 
+        [JsonIgnore]
         public virtual ISet<Book> Books { get; protected set; } = new HashSet<Book>();
 
         public override string ToString() => $"{this.Name} ";
