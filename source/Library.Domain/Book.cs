@@ -17,6 +17,16 @@
 
         public virtual Shelf Shelf { get; protected set; }
 
+        public Book()
+        {
+
+        }
+
+        public Book(string name)
+        {
+            this.Title = name;
+        }
+
         public override string ToString() => $"Название книги: \"{this.Title}\"\n\tАвтор: {this.Authors.Join()}\n\tЖанр: {this.Genres.Join()}\n\tПубликация в \"{this.Publishers.Join()}\"\n\tКомната: {this.Shelf}\n";
     }
 }

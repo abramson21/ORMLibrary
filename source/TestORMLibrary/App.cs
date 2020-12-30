@@ -6,28 +6,40 @@
     using System.Threading.Tasks;
     using Library.Domain;
     using NHibernate;
+    using Library.Services;
 
     class App
     {
-        private readonly ISessionFactory sessionFactory;
+        private readonly IBookServices bookServices;
 
-        public App(ISessionFactory sessionFactory)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="App"/> class.
+        /// </summary>
+        /// <param name="bookServices"> </param>
+        public App(IBookServices bookServices)
         {
-            this.sessionFactory = sessionFactory ?? throw new ArgumentNullException(nameof(sessionFactory));
+            this.bookServices = bookServices ?? throw new ArgumentNullException(nameof(bookServices));
         }
 
+        /// <summary>
+        /// Метод запуска приложения.
+        /// </summary>
+        /// <returns> Успешно завершённая задача. </returns>
         public async Task Run()
         {
             Console.OutputEncoding = Encoding.UTF8;
 
-            using (var session = this.sessionFactory.OpenSession())
-            {
-                var books = session.Query<Book>().ToList();
-                foreach (var book in books)
-                {
-                    Console.WriteLine(book);
-                }
-            }
+            var directorId = 2;
+
+            var movies = this.bookServices.Get(directorId);
+            //В
+            //foreach (var item in movies)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            Console.WriteLine(movies);
+
 
             await Task.CompletedTask;
         }

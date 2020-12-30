@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace Library.Domain
 {
@@ -12,6 +13,7 @@ namespace Library.Domain
 
         public virtual Room Room { get; protected set; }
 
+        [JsonIgnore]
         public virtual ISet<Book> Books { get; protected set; } = new HashSet<Book>();
 
         public override string ToString() => $" {this.Room} -- {this.Description}";
