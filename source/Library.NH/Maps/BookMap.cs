@@ -1,9 +1,9 @@
-﻿namespace Library.NH
+﻿namespace Library.NH.Maps
 {
     using FluentNHibernate.Mapping;
     using Library.Domain;
 
-    class BookMap : ClassMap<Book>
+    public class BookMap : ClassMap<Book>
     {
         public BookMap()
         {
@@ -13,13 +13,13 @@
 
             this.Map(x => x.Title);
 
-            this.HasManyToMany(x => x.Genres).Table("GenreBook");
+            this.HasManyToMany(x => x.Authors);
 
-            this.HasManyToMany(x => x.Authors).Table("AuthorBook");
+            this.HasManyToMany(x => x.Publishers);
+            
+            this.HasManyToMany(x => x.Genres);
 
             this.References(x => x.Shelf, "ID_Shelf");
-
-            this.HasManyToMany(x => x.Publishers).Table("PublisherBook");
         }
     }
 }

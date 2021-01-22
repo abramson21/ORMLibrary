@@ -1,7 +1,6 @@
 ﻿namespace Infrastructure.Conventions
 {
     using System;
-
     using FluentNHibernate;
     using FluentNHibernate.Conventions;
 

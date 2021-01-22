@@ -15,7 +15,7 @@
 
             this.HasMany(x => x.Books);
 
-            this.References(x => x.Room, "ID_Room");
+            this.References(x => x.Room, "ID");
         }
     }
 }

@@ -1,11 +1,11 @@
 ﻿namespace Library.NH.Maps
 {
-    using Library.Domain;
     using FluentNHibernate.Mapping;
+    using Library.Domain;
 
-    public class PublicationMap : ClassMap<Publisher>
+    public class PublisherMap : ClassMap<Publisher>
     {
-        public PublicationMap()
+        public PublisherMap()
         {
             this.Table("Publishers");
 
@@ -13,7 +13,7 @@
 
             this.Map(x => x.Name);
 
-            this.HasManyToMany(x => x.Books).Table("PublisherBook");
+            this.HasManyToMany(x => x.Books);
         }
     }
 }

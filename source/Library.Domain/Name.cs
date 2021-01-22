@@ -1,6 +1,7 @@
 ﻿namespace Library.Domain
 {
     using System;
+    using Infrastructure.Extensions;
 
     public class Name
     {
@@ -10,30 +11,22 @@
 
         public string MiddleName { get; }
 
+        protected Name() { }
 
-        [Obsolete("For NHibernate only.", true)]
-        protected Name()
+        public Name(string firstName, string lastName, string middleName)
         {
-        }
+            this.FirstName = firstName.NullIfNullOrWhiteSpace() ??
+                             throw new ArgumentOutOfRangeException(nameof(firstName));
 
-        private void CheckInputString(string value)
-        {
-            if (value != null && string.IsNullOrWhiteSpace(value))
+            this.LastName = lastName.NullIfNullOrWhiteSpace() ??
+                             throw new ArgumentOutOfRangeException(nameof(lastName));
+
+            if (middleName == null && string.IsNullOrWhiteSpace(middleName))
             {
-                throw new ArgumentOutOfRangeException(nameof(value));
+                throw new ArgumentOutOfRangeException(nameof(middleName));
             }
-        }
 
-        public Name(string firstName, string secondName, string middelName)
-        {
-            this.CheckInputString(firstName);
-            this.FirstName = firstName;
-
-            this.CheckInputString(secondName);
-            this.LastName = secondName;
-
-            this.CheckInputString(middelName);
-            this.MiddleName = middelName;
+            this.MiddleName = middleName.NullIfNullOrWhitespaceTrim();
         }
 
         public override int GetHashCode()
@@ -59,7 +52,9 @@
                 && string.Equals(this.MiddleName, other.MiddleName, StringComparison.InvariantCulture);
         }
 
-        /// <inheritdoc/>
-        public override string ToString() => $"{this.LastName} {this.FirstName} {this.MiddleName}".Trim();
+        public override string ToString() => FullName;
+
+        public virtual string FullName => $"{this.FirstName} {this.LastName} {this.MiddleName}".Trim();
+
     }
 }

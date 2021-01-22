@@ -1,4 +1,6 @@
-﻿namespace Infrastructure.Conventions
+﻿using System;
+
+namespace Infrastructure.Conventions
 {
     using FluentNHibernate.Conventions;
     using FluentNHibernate.Conventions.Inspections;
@@ -13,7 +15,8 @@
             IManyToManyCollectionInspector collection,
             IManyToManyCollectionInspector otherSide)
         {
-            return $"{collection.ChildType.Name}_{otherSide.ChildType.Name}";
+            Console.WriteLine($"{collection.EntityType.Name}_{otherSide.EntityType.Name}");
+            return $"{collection.EntityType.Name}_{otherSide.EntityType.Name}";
         }
 
         /// <inheritdoc />
@@ -23,3 +26,4 @@
         }
     }
 }
+

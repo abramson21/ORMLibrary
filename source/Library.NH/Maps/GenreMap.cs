@@ -13,7 +13,7 @@
 
             this.Map(x => x.Name);
 
-            this.HasManyToMany(x => x.Books).Table("GenreBook");
+            this.HasManyToMany(x => x.Books);
         }
     }
 }

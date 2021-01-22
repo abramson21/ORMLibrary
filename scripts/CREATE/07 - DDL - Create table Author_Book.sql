@@ -1,6 +1,6 @@
 use DBLibraryHome
 
-CREATE TABLE [dbo].[AuthorBook]
+CREATE TABLE [dbo].[Author_Book]
 (
       [ID]         int primary key
     , [ID_Authors] int not null

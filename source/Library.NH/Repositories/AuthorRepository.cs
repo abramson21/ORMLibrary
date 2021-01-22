@@ -1,10 +1,10 @@
 ﻿namespace Library.NH.Repositories
 {
-    using NHibernate;
     using System;
     using System.Linq;
     using System.Linq.Expressions;
     using Library.Domain;
+    using NHibernate;
 
     public class AuthorRepository : IAuthorRepository
     {
@@ -14,9 +14,9 @@
 
         public AuthorRepository(ISessionFactory sessionFactory)
         {
-            this.sessionFactory = sessionFactory ?? throw new ArgumentNullException(nameof(sessionFactory));
+            var factory = sessionFactory ?? throw new ArgumentNullException(nameof(sessionFactory));
 
-            this.session = this.sessionFactory.OpenSession();
+            this.session = factory.OpenSession();
         }
 
         public IQueryable<Author> GetAll()
@@ -24,16 +24,41 @@
             return this.session.Query<Author>();
         }
 
-        public bool TryGet(int id, out Author author)
-        {
-            author = this.GetAll().SingleOrDefault(t => t.Id == id);
-            return author != null;
-        }
-
         public IQueryable<Author> Filter(Expression<Func<Author, bool>> filter)
         {
+            if (filter == null)
+            {
+                throw new ArgumentNullException(nameof(filter));
+            }
+
+            //return this.GetAll().Where(x => filter(x));
             return this.GetAll().Where(filter);
         }
-        
+
+        public Author Get(int id)
+        {
+            return this.GetAll().SingleOrDefault(x => x.ID == id);
+        }
+
+        public bool TryGet(int id, out Author author)
+        {
+            author = this.GetAll().SingleOrDefault(t => t.ID == id);
+            return author != null;
+            //return (author = this.Get(id)) != null;
+        }
+
+        public Author Create(Author author)
+        {
+            var id = (int)this.session.Save(author);
+            this.session.Flush();
+            return author;
+        }
+
+        public void Delete(int id)
+        {
+            if (!this.TryGet(id, out var author)) return;
+            this.session.Delete(author);
+            this.session.Flush();
+        }
     }
 }

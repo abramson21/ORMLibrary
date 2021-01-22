@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Text.Json.Serialization;
-
-namespace Library.Domain
+﻿namespace Library.Domain
 {
+    using System.Collections.Generic;
+    using System.Text.Json.Serialization;
+
     public class Shelf
     {
         public virtual int Id { get; protected set; }
-
-        public virtual int ID_Room { get; protected set; }
 
         public virtual string Description { get; protected set; }
 
@@ -16,6 +14,9 @@ namespace Library.Domain
         [JsonIgnore]
         public virtual ISet<Book> Books { get; protected set; } = new HashSet<Book>();
 
-        public override string ToString() => $" {this.Room} -- {this.Description}";
+        public override string ToString()
+        {
+            return this.Description;
+        }
     }
 }

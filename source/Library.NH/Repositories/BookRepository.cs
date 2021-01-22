@@ -1,43 +1,37 @@
 ﻿namespace Library.NH.Repositories
 {
-    using NHibernate;
     using System;
     using System.Linq;
-    using System.Linq.Expressions;
     using Library.Domain;
+    using NHibernate;
 
     public class BookRepository : IBookRepository
     {
-        private readonly ISessionFactory sessionFactory;
 
         private readonly ISession session;
 
-        public BookRepository(ISessionFactory sessionFactory)
+        public BookRepository(ISession session)
         {
-            this.sessionFactory = sessionFactory ?? throw new ArgumentNullException(nameof(sessionFactory));
-
-            this.session = this.sessionFactory.OpenSession();
+            this.session = session ?? throw new ArgumentNullException(nameof(session));
         }
-
         public IQueryable<Book> GetAll()
         {
             return this.session.Query<Book>();
         }
 
-        public bool TryGet(int id, out Book book)
+        public Book GetBooksForAuthorID(int id)
         {
-            book = this.GetAll().SingleOrDefault(t => t.Id == id);
-            return book != null;
-        }
- 
-        public IQueryable<Book> Filter(Expression<Func<Book, bool>> filter)
-        {
-            return this.GetAll().Where(filter);
+            return this.GetAll().SingleOrDefault(x => x.Id == id);
         }
 
-        public Book Get(int id)
+        public Book GetId(int id)
         {
-            return this.GetAll().SingleOrDefault(g => g.Id == id);
+            return this.GetAll().SingleOrDefault(x => x.Id == id);
+        }
+
+        public IQueryable<Book> GetBooksByTitle()
+        {
+            return this.GetAll();
         }
     }
 }
