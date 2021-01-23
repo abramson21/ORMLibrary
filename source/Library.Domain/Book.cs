@@ -5,7 +5,7 @@
 
     public class Book
     {
-        public Book() { }
+        protected Book() { }
 
         public Book(string title)
         {

@@ -9,7 +9,7 @@
         {
             this.Table("Books");
 
-            this.Id(x => x.Id);
+            this.Id(x => x.Id).GeneratedBy.Increment();
 
             this.Map(x => x.Title);
 

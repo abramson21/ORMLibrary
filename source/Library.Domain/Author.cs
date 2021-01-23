@@ -15,7 +15,7 @@
 
         public override string ToString() => $"{this.Name}";
 
-        [Obsolete("Конструктор только для ORM")]
+        [Obsolete("Конструктор только для ORM", true)]
         protected Author() { }
 
         public Author(string lastName, string firstName, string middleName)

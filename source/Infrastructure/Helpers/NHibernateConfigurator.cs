@@ -38,7 +38,7 @@
             //.Conventions.AddAssembly(Assembly.GetExecutingAssembly()));
             //.ExposeConfiguration(BuildSchema);
             //вместо.
-            //.Conventions.Add<MyIdConvention>()
+            .Conventions.Add<MyIdConvention>()
             .Conventions.Add<MyForeignKeyConvention>()
             .Conventions.Add<MyManyToManyTableNameConvention>());
         }

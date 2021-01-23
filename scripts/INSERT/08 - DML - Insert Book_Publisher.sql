@@ -1,4 +1,4 @@
-insert into Publisher_Book
+insert into Book_Publisher
 values (1, 1, 1)
      , (2, 2, 2)
      , (3, 3, 3)

@@ -50,8 +50,6 @@
             expression.CreateMap<Book, BookDTO>()
                 .ForMember(d => d.Title, opt => opt.MapFrom(s => s.Title))
                 .ForMember(d => d.Id, opt => opt.MapFrom(src => src.Id))
-                .ForMember(d => d.Id, opt => opt.MapFrom(src => src.Id))
-                .ForMember(d => d.Id, opt => opt.MapFrom(src => src.Id))
                 .ForMember(d => d.Shelf, opt => opt.MapFrom(src => src.Shelf));
         }
 

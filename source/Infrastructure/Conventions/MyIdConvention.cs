@@ -12,6 +12,6 @@
         /// Метод, применяющий правила порождения значения ключа на стороне приложения.
         /// </summary>
         /// <param name="instance"> Объект типа. </param>
-        public void Apply(IIdentityInstance instance) => instance.GeneratedBy.HiLo("20");
+        public void Apply(IIdentityInstance instance) => instance.GeneratedBy.Increment();
     }
 }
