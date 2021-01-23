@@ -5,6 +5,13 @@
 
     public class Shelf
     {
+        public Shelf() { }
+
+        public Shelf(string description)
+        {
+            this.Description = description;
+        }
+
         public virtual int Id { get; protected set; }
 
         public virtual string Description { get; protected set; }

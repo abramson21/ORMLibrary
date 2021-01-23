@@ -22,5 +22,10 @@
         {
             this.Name = new Name(firstName, lastName, middleName);
         }
+
+        public Author(Name name)
+        {
+            this.Name = name;
+        }
     }
 }

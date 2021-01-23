@@ -5,6 +5,13 @@
 
     public class Publisher
     {
+        public Publisher() { }
+
+        public Publisher(string name)
+        {
+            this.Name = name;
+        }
+
         public virtual int Id { get; protected set; }
 
         public virtual string Name { get; protected set; }

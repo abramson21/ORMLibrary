@@ -5,6 +5,13 @@
 
     public class Genre
     {
+        public Genre() { }
+
+        public Genre(string name)
+        {
+            this.Name = name;
+        }
+
         public virtual int Id { get; protected set; }
 
         public virtual string Name { get; protected set; }

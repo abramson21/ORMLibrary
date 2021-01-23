@@ -5,6 +5,13 @@
 
     public class Book
     {
+        public Book() { }
+
+        public Book(string title)
+        {
+            this.Title = title;
+        }
+
         public virtual int Id { get; protected set; }
 
         public virtual string Title { get; protected set; }
